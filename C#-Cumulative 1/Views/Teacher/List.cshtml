@@ -1,0 +1,23 @@
+﻿@model IEnumerable<C__Cumulative_1.Models.Teacher>
+
+<h1>Teachers List</h1>
+
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Subject</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var teacher in Model)
+    {
+        <tr>
+            <td>@teacher.FirstName</td>
+            <td>@teacher.LastName</td>
+            <td>@teacher.Subject</td>
+            <td><a href="@Url.Action("Show", "TeacherPage", new { id = teacher.TeacherID })">Details</a></td>
+        </tr>
+    }
+</table>
+

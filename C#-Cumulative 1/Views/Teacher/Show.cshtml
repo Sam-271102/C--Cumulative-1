@@ -1,0 +1,13 @@
+﻿@model C__Cumulative_1.Models.Teacher
+
+<h1>Teacher Details</h1>
+
+<div>
+    <p><strong>First Name:</strong> @Model.FirstName</p>
+    <p><strong>Last Name:</strong> @Model.LastName</p>
+    <p><strong>Subject:</strong> @Model.Subject</p>
+    <p><strong>Hire Date:</strong> @Model.HireDate.ToShortDateString()</p>
+</div>
+
+<a href="@Url.Action("List", "TeacherPage")">Back to List</a>
+
